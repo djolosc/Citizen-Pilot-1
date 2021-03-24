@@ -1,11 +1,14 @@
-node_modules/**/*
-npm-debug.*
-*.jks
-*.p8
-*.p12
-*.key
-*.orig.*
-web-build/
+.DS_*
+*.log
+logs
+**/*.backup.*
+**/*.back.*
 
-# macOS
-.DS_Store
+node_modules
+bower_components
+
+*.sublime*
+
+psd
+thumb
+sketch
