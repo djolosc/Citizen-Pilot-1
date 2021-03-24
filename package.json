@@ -17,7 +17,10 @@
   },
   "homepage": "https://github.com/Mdods/Citizen-Pilot#readme",
   "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "eslint-plugin-react": "^7.22.0",
     "prettier": "^2.2.1",
+    "react-router-dom": "^5.2.0",
     "redux": "^4.0.5"
   },
   "devDependencies": {
