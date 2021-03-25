@@ -1,15 +1,16 @@
 import React from 'react'
+import SearchOptions from './searchOptions'
+
+
+
 
 
 const Reports = () => {
   return (
 		<div>
 			<div>
-				<h1> container for checkboxs</h1>
+				<SearchOptions/>
 			</div>		
-			<div>
-				<h1>container for report card</h1>
-			</div>
 		</div>		
 	);
 }
