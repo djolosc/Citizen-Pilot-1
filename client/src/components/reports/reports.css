@@ -1,3 +1,4 @@
-.searchContainer {
-  border: solid;
+.reports-container {
+  margin-left: 250px;
+  display: flex;
 }
