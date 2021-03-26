@@ -12,6 +12,8 @@
   font-size: 30px;
   border: 5px solid white;
   box-shadow: black 0px 0px 1px;
+  display: flex;
+  flex-direction: column;
 }
 
 .edge-shadow:before {
@@ -38,4 +40,14 @@
   box-shadow: 15px 30px 15px rgb(141, 141, 141);
   transform: skew(7deg, 7deg);
   z-index: -1;
+}
+
+.description-text-container {
+  height: 20vh;
+  display: flex;
+}
+
+.description-text {
+  text-align: left;
+  font-size: 25px;
 }

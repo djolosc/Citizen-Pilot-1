@@ -7,22 +7,25 @@ import './reports.css'
 const MOCKDATA = [
   {category: 'transport',
   description: 'There is a big hole in the road. Street number 5.',
-  langtitude: 55.33,
-  latitude: 44.5,
+  latitude: 44.78930726934227,
+  longitude:  20.483746780551883,
   urgency: true,
   image: 'img',
   Fname: 'Corona',
-  Lname: 'Bench'},
+  Lname: 'Bench',
+email: 'corona@gmail'},
   
 
   {category: 'environment',
   description: 'River is blue',
-  langtitude: 55.33,
-  latitude: 43.5,
+  latitude: 44.81655677954322,
+  longitude:  20.44972249719375,
+
   urgency: false,
   image: 'img',
   Fname: 'Haydn',
-  Lname: 'Ozzie'},
+  Lname: 'Ozzie',
+  email: 'haydn@gmail'},
 ];
 
 
@@ -30,13 +33,16 @@ const Reports = () => {
   const [descriptionContainerData, setDescriptionContainerData] = useState<report>({
     category: '',
   description: '',
-  langtitude: 0,
   latitude: 0,
+  longitude: 0,
   urgency: false,
   image: '',
   Fname: '',
   Lname: '',
+  email: ''
   });
+
+  const [isClicked, setClicked] = useState(false);
 
   const tabColor = {
     backgroundColor: '#3d41d7',
@@ -48,14 +54,12 @@ const Reports = () => {
         {MOCKDATA.map(report => (
           <div 
           style={tabColor}
-          onClick={()=> {
-            setDescriptionContainerData(report)
-          }} >
-            <ReportTab category={report.category} urgency={report.urgency} Fname={report.Fname} Lname={report.Lname}/>
+          >
+            <ReportTab report={report} setClicked={setClicked} setDescriptionContainerData={setDescriptionContainerData}/>
           </div>))
         }
       </div>
-      <DescriptionTab descriptionContainerData={descriptionContainerData}/>
+      <DescriptionTab descriptionContainerData={descriptionContainerData} isClicked={isClicked}/>
     </div>
   );
 };

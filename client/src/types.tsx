@@ -1,8 +1,9 @@
 export type report = {category: string;
   description: string;
-  langtitude: number;
   latitude: number;
+  longitude: number;
   urgency: boolean;
   image: string;
   Fname: string;
-  Lname: string}
+  Lname: string;
+email: string;}
