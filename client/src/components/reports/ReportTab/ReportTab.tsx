@@ -1,6 +1,9 @@
 import React, {useState, SetStateAction} from 'react';
 import './ReportTab.css';
 import {report} from '../../../types';
+import useClipboard from "react-use-clipboard";
+
+
 type Props = {
   report: report;
   setClicked: React.Dispatch<SetStateAction<boolean>>
@@ -10,7 +13,9 @@ type Props = {
 const ReportTab: React.FC<Props> = ({report, setClicked, setDescriptionContainerData}) =>
 {
   
-  const {Fname, Lname, category, urgency, email} = report;
+  const {Fname, Lname, category, urgency, email} = report
+  const [isCopied, setCopied] = useClipboard(email);
+
   return (
     <div className='report-Container'>
       <div className='headline-Container'>
@@ -21,8 +26,9 @@ const ReportTab: React.FC<Props> = ({report, setClicked, setDescriptionContainer
         <div className='info' >
           <p>From {Lname} {Fname}</p> 
         </div >
-        <div  className='email' >
-          <p>{email}</p>   
+        <div className='email' onClick={setCopied} >
+            <p>{email}</p> 
+            <div>{!isCopied ? <div /> : "Copied"}</div>  
         </div>
                
     </div>

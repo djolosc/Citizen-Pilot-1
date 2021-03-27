@@ -7,3 +7,13 @@ export type report = {category: string;
   Fname: string;
   Lname: string;
 email: string;}
+
+export type proposal = {
+  title: string,
+  description: string,
+  location: string,
+  image: string,
+  votes: number,
+  approved: boolean,
+  userId: number,
+}

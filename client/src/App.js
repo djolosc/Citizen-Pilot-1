@@ -7,7 +7,7 @@ import Alerts from './components/alerts/Alerts';
 import SideNav from './navigation/SideNav';
 import Reports from './components/reports/Reports.tsx';
 import ActivePolls from './components/activePolls/activePolls';
-import Proposals from './components/Proposals/ActiveProposals';
+import Proposals from './components/Proposals/Proposals';
 //const NavStack = () => {
 
 //}

@@ -1,5 +1,9 @@
 import React from 'react';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import {MAP_KEY} from '../../../config'
+const MAP_API_KEY=process.env.REACT_APP_MAP_API_KEY;
+
+
 
 type mapProps = {
   latitude: number,
@@ -7,7 +11,7 @@ type mapProps = {
 }
 
 const MapContainer: React.FC<mapProps> = ({latitude, longitude}) => {
-  
+  console.log(MAP_API_KEY)
   const mapStyles = {        
     height: "50vh",
     width: "100%"};
@@ -18,7 +22,7 @@ const MapContainer: React.FC<mapProps> = ({latitude, longitude}) => {
   
   return (
      <LoadScript
-       googleMapsApiKey="AIzaSyDqkdrEN9GApqXDhlcJPEeJahc_aPkGQoE"
+       googleMapsApiKey={MAP_KEY}
 >
         <GoogleMap
           mapContainerStyle={mapStyles}
